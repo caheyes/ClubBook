@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/assets/styles/_fonts';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// Exemplo adicional para personalizar outras propriedades do mat-form-field
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  .mat-form-field-outline-start, 
+  .mat-form-field-outline-end, 
+  .mat-form-field-outline-gap {
+    border-color: green !important; // Cor personalizada para a borda
+    border-width: 2px !important;  // Largura da borda
+  }
+}
+
