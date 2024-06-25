@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { BookLoginComponent } from '../../assets/images/book-login/book-login.component';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormControl, FormGroupDirective, NgForm, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormControl, FormGroupDirective, NgForm, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ErrorStateMatcher} from '@angular/material/core';
+import { Router } from '@angular/router';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -25,4 +26,11 @@ export class LoginComponent {
   senhaForm = new FormControl('', [Validators.required]);
 
   matcher = new MyErrorStateMatcher();
+
+  constructor(private router: Router) {}
+
+  //methods
+  getLogin() {
+    this.router.navigate(['/home']);
+  }
 }

@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(30, 60, 90, 0.1);
+  &__logo {
+    padding: 10px 0;
+    color: #00B0FF;
+    font-weight: 900;
+    font-size: 32px;
+    font-family: 'Lato-Bold';
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.btn {
+  width: 160px;
+  padding: 10px 18px;
+  text-decoration: none;
+}
