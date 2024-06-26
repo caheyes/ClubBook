@@ -1,0 +1,19 @@
+<form class="form-livro">
+  <mat-form-field class="form-livro__input" appearance="outline">
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" [formControl]="nomeForm" [errorStateMatcher]="matcher">
+    <mat-hint></mat-hint>
+    @if (nomeForm.hasError('required')) {
+    <mat-error>O nome é obrigatório</mat-error>
+    }
+  </mat-form-field>
+  <mat-form-field class="form-livro__input" appearance="outline">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput rows="8" type="text" [formControl]="descricaoForm" [errorStateMatcher]="matcher"></textarea>
+    <mat-hint></mat-hint>
+    @if (descricaoForm.hasError('required')) {
+    <mat-error>A descrição é obrigatória</mat-error>
+    }
+  </mat-form-field>
+  <button class="btn">Adicionar</button>
+</form>

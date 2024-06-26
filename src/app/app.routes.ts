@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
-import { RegistrosComponent } from './pages/registros/registros.component';
 import { LivrosComponent } from './pages/livros/livros.component';
 import { HomeComponent } from './pages/home/home.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
+import { OrganismListaLivrosComponent } from './components/organisms/organism-lista-livros/organism-lista-livros.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -10,8 +11,13 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent, 
     children: [
       { path: 'livros', component: LivrosComponent },
-      { path: 'registros', component: RegistrosComponent },
+      { path: 'usuario', component: UsuarioComponent,
+        children: [
+          { path: 'lista', component: OrganismListaLivrosComponent },
+        ]
+      },
     ]
   },
-  // { path: '**', redirectTo: '/login' }
+  { path: 'usuario', component: UsuarioComponent },
+  { path: '**', redirectTo: '/login' }
 ];
