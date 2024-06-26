@@ -19,11 +19,11 @@ export class LivrosService {
     return this.http.post<any>(this.apiUrl, livro);
   }
 
-  deleteLivro(id: number): Observable<any> {
+  deleteLivro(id: string): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/${id}`);
   }
 
-  updateLivro(id: number, livro: any): Observable<any> {
+  updateLivro(id: string, livro: any): Observable<any> {
     return this.http.put<any>(`${this.apiUrl}/${id}`, livro);
   }
 }
