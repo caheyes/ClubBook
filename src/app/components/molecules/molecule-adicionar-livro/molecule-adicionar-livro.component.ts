@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter  } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormControl, FormGroupDirective, NgForm, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -20,6 +20,8 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrl: './molecule-adicionar-livro.component.scss'
 })
 export class MoleculeAdicionarLivroComponent {
+  @Output() atualizarLista = new EventEmitter<void>();
+
   nomeForm = new FormControl('', [Validators.required]);
   descricaoForm = new FormControl('', [Validators.required]);
   matcher = new MyErrorStateMatcher();
@@ -35,10 +37,9 @@ export class MoleculeAdicionarLivroComponent {
       estrelas: 4
     };
 
-    console.log(data);
 
     this.livrosService.postLivro(data).subscribe((livro: any) => {
-      console.log('deu bom');
+      this.atualizarLista.emit();
     });
   }
 }
