@@ -24,16 +24,13 @@
       &:hover {
         background: #00B0FF;
         color: #fff !important;
-        font-weight: 900;
+        font-weight: 700;
+      }
+      &.active-link {
+        background: #00B0FF !important;
+        color: #fff !important;
         font-weight: 700;
       }
     }
   }
-}
-
-.active-link {
-  background: #00B0FF !important;
-  color: #fff !important;
-  font-weight: 900;
-  font-weight: 700;
 }

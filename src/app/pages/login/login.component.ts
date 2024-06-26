@@ -31,6 +31,6 @@ export class LoginComponent {
 
   //methods
   getLogin() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/home/livros']);
   }
 }
