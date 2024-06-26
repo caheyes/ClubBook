@@ -1,5 +1,5 @@
-<div class="livro">
-  <h3 class="livro__titulo">Titulo</h3>
-  <p class="livro__descricao">Descrição</p>
+<div class="livro" *ngFor="let livro of listaLivros">
+  <h3 class="livro__titulo">{{livro.nome}}</h3>
+  <p class="livro__descricao">{{livro.descricao}}</p>
   <button class="livro__btn">Deletar</button>
 </div>

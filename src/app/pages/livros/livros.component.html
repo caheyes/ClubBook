@@ -1,22 +1,7 @@
 <section class="books">
-  <div class="books__book">
+  <div class="books__book" *ngFor="let livro of listaLivros">
     <img src="" alt="" class="books__book__img">
-    <h2 class="books__book__title">Titulo</h2>
-    <p class="books__book__description">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos</p>
-  </div>
-  <div class="books__book">
-    <img src="" alt="" class="books__book__img">
-    <h2 class="books__book__title">Titulo</h2>
-    <p class="books__book__description">descrição</p>
-  </div>
-  <div class="books__book">
-    <img src="" alt="" class="books__book__img">
-    <h2 class="books__book__title">Titulo</h2>
-    <p class="books__book__description">descrição</p>
-  </div>
-  <div class="books__book">
-    <img src="" alt="" class="books__book__img">
-    <h2 class="books__book__title">Titulo</h2>
-    <p class="books__book__description">descrição</p>
+    <h2 class="books__book__title">{{livro.nome}}</h2>
+    <p class="books__book__description">{{livro.descricao}}</p>
   </div>
 </section>
